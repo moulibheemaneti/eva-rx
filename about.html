@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EvaRx - SLM-Based Healthcare AI Platform</title>
+    <title>About EvaRx - SLM-Based Healthcare AI Platform</title>
     <style>
         * {
             margin: 0;
@@ -23,6 +23,10 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        .container--center h2 {
+            text-align: center;
         }
 
         header {
@@ -135,26 +139,6 @@
             animation: slideInUp 1s ease-out 0.2s both;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            animation: slideInUp 1s ease-out 0.4s both;
-        }
-
-        .cta-button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
         @keyframes slideInUp {
             from {
                 opacity: 0;
@@ -167,23 +151,48 @@
             }
         }
 
-        .features {
+        .section {
             padding: 80px 0;
+        }
+
+        .section.alt {
             background: #f8f9fa;
         }
 
-        .features h2 {
+        .section.gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .section h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: #333;
         }
 
-        .features-grid {
+        .section.gradient h2 {
+            color: white;
+        }
+
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-bottom: 4rem;
+        }
+
+        .features-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .specs-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .stats-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-top: 3rem;
         }
 
         .feature-card {
@@ -224,24 +233,6 @@
             line-height: 1.6;
         }
 
-        .tech-specs {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .tech-specs h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #333;
-        }
-
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
         .spec-item {
             background: linear-gradient(135deg, #f8f9fa, #e9ecef);
             padding: 1.5rem;
@@ -264,25 +255,6 @@
         .spec-item p {
             color: #666;
             font-size: 0.9rem;
-        }
-
-        .performance {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .performance h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .performance-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
         }
 
         .stat {
@@ -311,6 +283,101 @@
             opacity: 0.9;
         }
 
+        /* Name Origin Section */
+        .name-origin {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .name-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .name-part {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .name-part:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .name-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .name-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .meaning-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+
+        .meaning-list li {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .meaning-list li:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+        }
+
+        .meaning-highlight {
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .philosophy {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .philosophy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .philosophy-highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            font-weight: 500;
+        }
+
         footer {
             background: #333;
             color: white;
@@ -324,7 +391,7 @@
 
         @media (max-width: 768px) {
             .nav-links {
-                /* display: none; */
+                display: none;
             }
 
             .mobile-menu {
@@ -339,17 +406,24 @@
                 font-size: 2.5rem;
             }
 
-            .features-grid {
+            .name-breakdown {
                 grid-template-columns: 1fr;
+            }
+
+            .name-title {
+                font-size: 3rem;
             }
         }
 
-        .page-content {
-            display: none;
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .page-content.active {
-            display: block;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -357,296 +431,250 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">EvaRx</div>
+            <a href="index.html" class="logo">EvaRx</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
-            <!-- <button class="mobile-menu">☰</button> -->
+            <button class="mobile-menu">☰</button>
         </nav>
     </header>
 
-    <div id="home-page" class="page-content active">
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>EvaRx</h1>
-                    <p class="subtitle">Small Language Models for Healthcare Intelligence</p>
-                    <a href="#" class="cta-button" onclick="showPage('about')">Learn More</a>
-                </div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>About EvaRx</h1>
+                <p class="subtitle">Understanding the Intelligence Behind the Name</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="features">
-            <div class="container">
-                <h2>Intelligent Healthcare Solutions</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🧠</div>
-                        <h3>Automated Knowledge Extraction</h3>
-                        <p>Transform unstructured R&D data including patents, trial reports, and literature into
-                            searchable, structured knowledge using advanced SLM technology.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Decision Support & Efficiency</h3>
-                        <p>Surface critical insights and cross-reference data instantly. Get answers to complex queries
-                            like "List documented side effects of compound X" in seconds.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🛡️</div>
-                        <h3>Regulatory & Compliance Aid</h3>
-                        <p>Highlight potential compliance issues, glossary inconsistencies, and missing citations in
-                            documentation while maintaining secure infrastructure.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💬</div>
-                        <h3>Context-Aware Interface</h3>
-                        <p>Unlike simple search tools, EvaRx maintains dialogue context and recalls past queries with
-                            lightweight memory modules for complex workflows.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔒</div>
-                        <h3>Secure Deployment</h3>
-                        <p>Designed for private cloud or on-premises integration with HIPAA-compliant pipelines,
-                            ensuring your sensitive data never leaves your environment.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Pharma-Specific Knowledge</h3>
-                        <p>Pre-built vocabularies and prompt libraries tuned to pharmaceutical terminology, leveraging
-                            existing pharma ontologies and curated templates.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="name-origin">
+        <div class="container container--center">
+            <h2>The Story Behind Our Name</h2>
+            <p style="text-align: center; font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto;">
+                EvaRx represents the perfect fusion of human intelligence and medical expertise, embodying our
+                commitment to transforming healthcare through AI innovation.
+            </p>
 
-        <section class="tech-specs">
-            <div class="container">
-                <h2>Technical Specifications</h2>
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <h4>Model Architecture</h4>
-                        <p>Fine-tuned Small Language Models under 7B parameters</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Top Models</h4>
-                        <p>Qwen3-1.7B, Gemma3 (1B), BioMistral-7B, MedGemma-4B-it</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Fine-Tuning Methods</h4>
-                        <p>LoRA, QLoRA, GaLore for efficient task-specific adaptation</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Benchmarks</h4>
-                        <p>MedQA, PubMedQA, MMLU (Medical Subsets)</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Deployment</h4>
-                        <p>On-premises or private cloud with HIPAA compliance</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Hardware Requirements</h4>
-                        <p>Runs efficiently on 8-core CPU or better GPU infrastructure</p>
-                    </div>
+            <div class="name-breakdown">
+                <div class="name-part fade-in">
+                    <div class="name-title">Eva</div>
+                    <div class="name-subtitle">"Life" • "Living One"</div>
+                    <p>Derived from the Hebrew name Eva, carrying profound symbolic meanings that resonate with our
+                        healthcare mission:</p>
+                    <ul class="meaning-list">
+                        <li><span class="meaning-highlight">"Life" or "Living One"</span> in Hebrew – representing
+                            vitality, growth, and the essence of life itself in the healthcare and pharmaceutical
+                            domain.</li>
+                        <li><span class="meaning-highlight">AI Assistant Persona</span> – evoking a digital companion
+                            with intelligence, empathy, and human-like understanding.</li>
+                        <li><span class="meaning-highlight">Intelligent Presence</span> – suggesting an AI that doesn't
+                            just process data, but truly understands and responds to human needs.</li>
+                        <li><span class="meaning-highlight">Healthcare Vitality</span> – embodying the life-giving
+                            potential of medical innovation and pharmaceutical breakthroughs.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
 
-        <section class="performance">
-            <div class="container">
-                <h2>Proven Performance</h2>
-                <p>Built on cutting-edge research and validated through rigorous testing</p>
-                <div class="performance-stats">
-                    <div class="stat">
-                        <span class="stat-number">>90%</span>
-                        <span class="stat-label">Accuracy in Entity Extraction</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">3B</span>
-                        <span class="stat-label">Parameter Working Prototype</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">
-                            <span class="stat-number">7B</span>
-                            <span class="stat-label">Parameters for Production Models</span>
-                        </span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Always-On Availability</span>
-                    </div>
+                <div class="name-part fade-in">
+                    <div class="name-title">Rx</div>
+                    <div class="name-subtitle">"Prescription" • "To Take"</div>
+                    <p>A universally recognized abbreviation in the medical world, derived from the Latin "recipe"
+                        meaning "to take":</p>
+                    <ul class="meaning-list">
+                        <li><span class="meaning-highlight">Medical Authority</span> – instantly recognizable to
+                            healthcare professionals worldwide as the symbol of prescription and treatment.</li>
+                        <li><span class="meaning-highlight">Pharmaceutical Focus</span> – representing our specialized
+                            expertise in drug development, clinical research, and pharmaceutical innovation.</li>
+                        <li><span class="meaning-highlight">Clinical Context</span> – commonly used in drug-related
+                            research, regulatory documentation, and healthcare communications.</li>
+                        <li><span class="meaning-highlight">Prescription for Innovation</span> – symbolizing our
+                            solution as the prescribed remedy for healthcare data challenges.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <div id="about-page" class="page-content">
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>About EvaRx</h1>
-                    <p class="subtitle">Revolutionizing Healthcare Communication with AI</p>
-                </div>
-            </div>
-        </section>
+    <section class="philosophy">
+        <div class="container">
+            <h2>Our Philosophy</h2>
+            <div class="philosophy-content">
+                <p>
+                    The combination of <strong>Eva</strong> and <strong>Rx</strong> creates more than just a name—it
+                    represents a philosophy. We believe that artificial intelligence should breathe life into healthcare
+                    data, transforming static information into dynamic, actionable insights that can save lives and
+                    accelerate medical breakthroughs.
+                </p>
 
-        <section class="features">
-            <div class="container">
-                <h2>The Problem We Solve</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">📊</div>
-                        <h3>Data Overload</h3>
-                        <p>Pharmaceutical R&D generates terabytes of unstructured data—patents, trial reports, and
-                            literature that overwhelm traditional review processes.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⏱️</div>
-                        <h3>Manual Inefficiency</h3>
-                        <p>Manual data review is slow, expensive, and error-prone, creating bottlenecks in drug
-                            development and clinical decision-making.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔍</div>
-                        <h3>Knowledge Retrieval</h3>
-                        <p>The key pain point: retrieving structured insights for drug development, compliance, and
-                            clinical trials from fragmented data sources.</p>
-                    </div>
+                <div class="philosophy-highlight">
+                    "EvaRx embodies the living intelligence that bridges the gap between vast pharmaceutical knowledge
+                    and the human need for clear, actionable medical insights."
                 </div>
-            </div>
-        </section>
 
-        <section class="tech-specs">
-            <div class="container">
-                <h2>Our Solution Approach</h2>
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <h4>Compact SLMs</h4>
-                        <p>We use fine-tuned small language models that are efficient yet powerful, specifically adapted
-                            for healthcare terminology and workflows.</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Fine-Tuning Over Training</h4>
-                        <p>We leverage pre-learned language capabilities through fine-tuning, drastically reducing time
-                            and cost compared to training from scratch.</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Domain Expertise</h4>
-                        <p>Our models are trained on pharmaceutical-specific datasets and validated against medical
-                            benchmarks for maximum accuracy.</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Security First</h4>
-                        <p>Built with HIPAA compliance in mind, ensuring sensitive healthcare data remains secure and
-                            private.</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Scalable Architecture</h4>
-                        <p>From small 8-core CPU deployments to large GPU clusters, EvaRx scales with your
-                            infrastructure needs.</p>
-                    </div>
-                    <div class="spec-item">
-                        <h4>Integration Ready</h4>
-                        <p>Designed to integrate with existing knowledge graphs, vector stores, and pharmaceutical data
-                            systems.</p>
-                    </div>
-                </div>
+                <p>
+                    Just as Eva represents the spark of life and intelligence, and Rx represents the medical expertise
+                    and precision required in healthcare, EvaRx combines these elements to create an AI assistant that
+                    doesn't just understand data—it understands the human context behind every medical query, every
+                    research question, and every pharmaceutical challenge.
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="performance">
-            <div class="container">
-                <h2>Why Choose EvaRx?</h2>
-                <p>Built by experts with deep ML backgrounds and pharmaceutical industry experience</p>
-                <div class="performance-stats">
-                    <div class="stat">
-                        <span class="stat-number">Expert</span>
-                        <span class="stat-label">Team with Deep ML Backgrounds</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">Proven</span>
-                        <span class="stat-label">Track Record with Vision-Text Tasks</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">Specialized</span>
-                        <span class="stat-label">Focus on Pharma Regulation & NLP</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">Efficient</span>
-                        <span class="stat-label">Hours of GPU Time vs. Months</span>
-                    </div>
+    <section class="section alt">
+        <div class="container">
+            <h2>The Problems We Solve</h2>
+            <div class="grid features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📊</div>
+                    <h3>Data Overload Challenge</h3>
+                    <p>Pharmaceutical R&D generates massive volumes of unstructured data—patents, clinical trial
+                        reports, research literature, and regulatory documents that overwhelm traditional review
+                        processes and create information bottlenecks.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⏱️</div>
+                    <h3>Manual Process Inefficiency</h3>
+                    <p>Traditional manual data review methods are time-consuming, expensive, and prone to human error,
+                        creating significant delays in drug development timelines and clinical decision-making
+                        processes.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Knowledge Retrieval Complexity</h3>
+                    <p>The critical challenge of extracting structured, actionable insights for drug development,
+                        regulatory compliance, and clinical trials from fragmented, disparate data sources across the
+                        pharmaceutical ecosystem.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="features">
-            <div class="container">
-                <h2>Technical Differentiators</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🧠</div>
-                        <h3>Memory-Efficient Processing</h3>
-                        <p>Our lightweight memory module tracks project-specific details across sessions, providing
-                            context-aware responses for complex pharmaceutical workflows.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔧</div>
-                        <h3>Extensible Design</h3>
-                        <p>The SLM engine integrates with external knowledge graphs and vector stores, and can be
-                            upgraded to larger models as needed without architectural changes.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📚</div>
-                        <h3>Open Medical LLM Benchmarking</h3>
-                        <p>We use the Open Medical LLM Leaderboard to benchmark and select the most suitable models,
-                            ensuring evidence-based performance claims.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>PEFT Methods</h3>
-                        <p>Parameter-Efficient Fine-Tuning using LoRA, QLoRA, and GaLore achieves performance comparable
-                            to full parameter fine-tuning with minimal resources.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🏥</div>
-                        <h3>Healthcare-Optimized</h3>
-                        <p>Pre-built vocabularies and prompt libraries specifically tuned to pharmaceutical terminology
-                            and existing pharma ontologies.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💻</div>
-                        <h3>Hardware Flexibility</h3>
-                        <p>Runs efficiently on various hardware configurations, from low-end 8-core CPUs for field teams
-                            to high-performance GPU clusters for enterprise deployments.</p>
-                    </div>
+    <section class="section">
+        <div class="container">
+            <h2>Our Innovative Solution Approach</h2>
+            <div class="grid specs-grid">
+                <div class="spec-item fade-in">
+                    <h4>Compact Small Language Models (SLMs)</h4>
+                    <p>We leverage fine-tuned small language models that are highly efficient yet exceptionally
+                        powerful, specifically adapted for healthcare terminology, pharmaceutical workflows, and medical
+                        contexts.</p>
+                </div>
+                <div class="spec-item fade-in">
+                    <h4>Fine-Tuning Over Training</h4>
+                    <p>Our approach utilizes pre-learned language capabilities through advanced fine-tuning techniques,
+                        dramatically reducing development time and computational costs compared to training models from
+                        scratch.</p>
+                </div>
+                <div class="spec-item fade-in">
+                    <h4>Domain-Specific Expertise</h4>
+                    <p>Our models are trained on carefully curated pharmaceutical-specific datasets and rigorously
+                        validated against established medical benchmarks to ensure maximum accuracy and reliability.</p>
+                </div>
+                <div class="spec-item fade-in">
+                    <h4>Security-First Architecture</h4>
+                    <p>Built with HIPAA compliance and data privacy at the core, ensuring that sensitive healthcare
+                        information remains secure, protected, and never compromises patient confidentiality.</p>
+                </div>
+                <div class="spec-item fade-in">
+                    <h4>Scalable Infrastructure</h4>
+                    <p>From lightweight 8-core CPU deployments for small teams to large-scale GPU clusters for
+                        enterprise operations, EvaRx scales seamlessly with your infrastructure requirements.</p>
+                </div>
+                <div class="spec-item fade-in">
+                    <h4>Integration-Ready Design</h4>
+                    <p>Engineered to integrate smoothly with existing knowledge graphs, vector databases, pharmaceutical
+                        data systems, and enterprise healthcare infrastructure without disruption.</p>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <section class="section gradient">
+        <div class="container">
+            <h2>Why Choose EvaRx?</h2>
+            <p>Built by experts with deep machine learning backgrounds and extensive pharmaceutical industry experience
+            </p>
+            <div class="grid stats-grid">
+                <div class="stat fade-in">
+                    <span class="stat-number">Expert</span>
+                    <span class="stat-label">Team with Deep ML & Healthcare Backgrounds</span>
+                </div>
+                <div class="stat fade-in">
+                    <span class="stat-number">Proven</span>
+                    <span class="stat-label">Track Record with Vision-Text AI Tasks</span>
+                </div>
+                <div class="stat fade-in">
+                    <span class="stat-number">Specialized</span>
+                    <span class="stat-label">Focus on Pharma Regulation & Medical NLP</span>
+                </div>
+                <div class="stat fade-in">
+                    <span class="stat-number">Efficient</span>
+                    <span class="stat-label">Hours of Processing vs. Months of Manual Work</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt">
+        <div class="container">
+            <h2>Technical Differentiators</h2>
+            <div class="grid features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Memory-Efficient Processing</h3>
+                    <p>Our innovative lightweight memory module tracks project-specific details across multiple
+                        sessions, providing intelligent context-aware responses for complex pharmaceutical workflows and
+                        research continuity.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Extensible Architecture</h3>
+                    <p>The SLM engine seamlessly integrates with external knowledge graphs and vector stores, and can be
+                        upgraded to larger models as needed without requiring fundamental architectural changes.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📚</div>
+                    <h3>Evidence-Based Benchmarking</h3>
+                    <p>We utilize the Open Medical LLM Leaderboard to rigorously benchmark and select the most suitable
+                        models, ensuring all performance claims are backed by scientific evidence and peer validation.
+                    </p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Advanced PEFT Methods</h3>
+                    <p>Parameter-Efficient Fine-Tuning using state-of-the-art LoRA, QLoRA, and GaLore techniques
+                        achieves performance comparable to full parameter fine-tuning while using minimal computational
+                        resources.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Healthcare-Optimized Intelligence</h3>
+                    <p>Pre-built vocabularies and prompt libraries specifically fine-tuned to pharmaceutical
+                        terminology, leveraging existing medical ontologies and carefully curated clinical templates for
+                        maximum accuracy.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💻</div>
+                    <h3>Hardware Flexibility</h3>
+                    <p>Runs efficiently across various hardware configurations, from cost-effective 8-core CPUs for
+                        field research teams to high-performance GPU clusters for enterprise-scale pharmaceutical
+                        operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 EvaRx. Smarter Conversations in Healthcare.</p>
+            <p>&copy; 2025 EvaRx. Bringing Life to Healthcare Intelligence.</p>
         </div>
     </footer>
 
     <script>
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
-
-            // Show selected page
-            document.getElementById(pageId + '-page').classList.add('active');
-
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
-
-        // Add smooth scrolling for better UX
+        // Smooth scrolling and animation on scroll
         document.addEventListener('DOMContentLoaded', function () {
-            // Add scroll effect to cards
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -655,20 +683,35 @@
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('visible');
                     }
                 });
             }, observerOptions);
 
-            // Observe all feature cards
-            document.querySelectorAll('.feature-card, .spec-item, .stat').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Add sequential animation delay to cards in the same section
+            const sections = document.querySelectorAll('.grid');
+            sections.forEach(section => {
+                const cards = section.querySelectorAll('.fade-in');
+                cards.forEach((card, index) => {
+                    card.style.transitionDelay = `${index * 0.1}s`;
+                });
             });
         });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-open');
+            });
+        }
     </script>
 </body>
 
